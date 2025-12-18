@@ -76,10 +76,8 @@ class CoursesController extends Controller
         return redirect()->route('courses.index')->with('success', 'Curso eliminado exitosamente.');
     }
     
-    // El método 'show' para ver detalles (si lo necesitas)
     public function show(Course $course)
     {
-        // Puedes crear una vista 'courses.show'
         return view('courses.show', compact('course'));
     }
 }
