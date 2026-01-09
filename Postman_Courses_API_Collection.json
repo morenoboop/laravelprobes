@@ -1,0 +1,163 @@
+{
+  "info": {
+    "_postman_id": "courses-api-collection",
+    "name": "Laravel Courses API",
+    "description": "API collection para pruebas de Courses en Laravel con Postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - Obtener todos los cursos",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/courses",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "courses"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET - Obtener un curso por ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/courses/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "courses", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST - Crear un nuevo curso",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Laravel Avanzado\",\n  \"description\": \"Curso completo de Laravel con patrones avanzados\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/courses",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "courses"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT - Actualizar un curso (completo)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"PHP Intermedio\",\n  \"description\": \"Aprende PHP intermedio con ejercicios prácticos\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/courses/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "courses", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH - Actualizar parcialmente un curso",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"description\": \"Descripción actualizada del curso\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/courses/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "courses", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE - Eliminar un curso",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/courses/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "courses", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
